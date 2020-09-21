@@ -8,7 +8,7 @@ resource "google_compute_instance" "vm_instance" {
   machine_type = "f1-micro"
   boot_disk {
     initialize_params {
-      image = "sunil-flow-agent-image"
+      image = "snaqvi/sunil-flow-agent-image"
     }
   }
   network_interface {
