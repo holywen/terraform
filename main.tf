@@ -3,12 +3,18 @@ provider "google" {
   region = "us-central1"
   zone = "us-central1-c"
 }
+
+data "google_compute_image" "my_image" {
+  family  = "sunil-flow-agent-image"
+  project = "snaqvi"
+}
+
 resource "google_compute_instance" "vm_instance" {
   name = "terraform-instance"
   machine_type = "f1-micro"
   boot_disk {
     initialize_params {
-      image = "snaqvi/sunil-flow-agent-image"
+      image = data.google_compute_image.my_image.self_link
     }
   }
   network_interface {
