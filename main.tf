@@ -30,4 +30,4 @@ resource "google_compute_instance" "vm_instance" {
 #  auto_create_subnetworks = "true"
 #}
 
-# gcloud compute instances list|grep terraform-instance|awk '{print $3}'
+# gcloud compute instances list|grep terraform-instance|awk '{print $4}'
