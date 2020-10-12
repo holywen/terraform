@@ -28,6 +28,6 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
-    searchFolder: '$(Build.ArtifactStagingDirectory)/jenkinsResults/**/TEST-*.xml'
+    searchFolder: '$(Build.ArtifactStagingDirectory)/jenkinsResults/'
     mergeTestResults: true
     failTaskOnFailedTests: true
