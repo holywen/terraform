@@ -24,3 +24,9 @@ steps:
     captureConsole: true
     capturePipeline: true
     isParameterizedJob: false
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    mergeTestResults: true
+    failTaskOnFailedTests: true
